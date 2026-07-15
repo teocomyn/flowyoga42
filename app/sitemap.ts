@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllAtelierSlugs } from "@/content/ateliers";
+import { BLOG_SLUGS } from "@/content/blog";
 import { COURSE_SLUGS } from "@/content/courses";
 import { SITE_URL } from "@/lib/constants";
 
@@ -9,6 +10,7 @@ const STATIC_ROUTES = [
   { path: "/tarifs", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/qui-suis-je", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/ateliers", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/cgv", priority: 0.3, changeFrequency: "yearly" as const },
   { path: "/mentions-legales", priority: 0.3, changeFrequency: "yearly" as const },
@@ -43,5 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...courseEntries, ...atelierEntries];
+  const blogEntries = BLOG_SLUGS.map((slug) => ({
+    url: `${SITE_URL}/blog/${slug}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  return [...staticEntries, ...courseEntries, ...atelierEntries, ...blogEntries];
 }

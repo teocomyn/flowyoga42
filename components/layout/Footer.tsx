@@ -95,6 +95,7 @@ const FOOTER_SECTIONS: FooterSection[] = [
   {
     label: "Informations",
     links: [
+      { title: "Blog", href: "/blog" },
       ...FOOTER_LEGAL_LINKS.map((link) => ({
         title: link.label,
         href: link.href,

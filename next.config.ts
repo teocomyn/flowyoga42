@@ -22,21 +22,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/blog/",
-        destination: "/ateliers",
-        permanent: true,
-      },
-      {
-        source: "/blog",
-        destination: "/ateliers",
-        permanent: true,
-      },
-      {
-        source: "/blog/:slug",
-        destination: "/ateliers",
-        permanent: true,
-      },
-      {
         source: "/parenthese-sur-la-presquile-du-chatelet-dimanche-5-juillet",
         destination: "/ateliers/parenthese-presquile-chatelet",
         permanent: true,
