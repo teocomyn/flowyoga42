@@ -1,5 +1,5 @@
 export const PAGE_HEROES = {
-  home: "/images/hero-cours.jpg",
+  home: "/images/vinyasa-practice.jpg",
   presentations: "/images/hero-qui-suis-je.jpg",
   cours: "/images/hero-cours.jpg",
   tarifs: "/images/hero-tarifs.jpg",

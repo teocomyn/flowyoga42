@@ -5,6 +5,9 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { SplitHeading } from "@/components/motion/SplitHeading";
 import { ReservationButton } from "@/components/ui/Button";
+import { PAGE_HEROES } from "@/lib/media";
+
+const HERO_IMAGE = PAGE_HEROES.home;
 
 const HERO_HIGHLIGHTS = [
   "Essai · 19 €",
@@ -21,21 +24,21 @@ export function Hero() {
       {/* Mobile : image visible dès l'arrivée */}
       <div className="md:hidden">
         <div className="relative px-4 pt-[5.25rem]">
-          <div className="relative aspect-[5/4] min-h-[42svh] max-h-[360px] overflow-hidden rounded-[1.75rem] shadow-[0_16px_40px_rgba(28,26,23,0.1)]">
+          <div className="relative aspect-[5/4] min-h-[42svh] max-h-[360px] overflow-hidden rounded-[1.75rem] shadow-[0_16px_40px_rgba(28,26,23,0.12)]">
             <Image
-              src="/images/hero-cours.jpg"
+              src={HERO_IMAGE}
               alt="Cours de yoga vinyasa à Saint-Just-Saint-Rambert · Flow Yoga Loire"
               fill
-              className="scale-105 object-cover object-[42%_38%]"
+              className="object-cover object-center"
               priority
               sizes="100vw"
             />
             <div
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink-900/80 to-transparent"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink-900/85 to-transparent"
               aria-hidden="true"
             />
             <div className="absolute inset-x-0 bottom-0 px-5 pb-5">
-              <p className="pill-tag w-fit border-sand-100/25 bg-sand-50/15 text-sand-50/90">
+              <p className="pill-tag w-fit border-sand-100/25 bg-ink-900/20 text-sand-50">
                 Saint-Just-Saint-Rambert
               </p>
               <h1 className="mt-3 font-serif text-[clamp(2rem,7.5vw,2.75rem)] leading-[0.98] text-sand-50">
@@ -76,9 +79,9 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Desktop : split texte + image */}
+      {/* Desktop : split texte + photo nette */}
       <div className="hidden min-h-[80vh] md:flex md:flex-row">
-        <div className="relative z-10 flex max-w-[50%] flex-1 flex-col justify-center px-10 py-16 lg:px-14 lg:py-20">
+        <div className="flex max-w-[48%] flex-1 flex-col justify-center bg-wash-cream px-10 py-16 lg:px-14 lg:py-20">
           <p className="pill-tag w-fit border-sand-200/80 bg-sand-50 text-clay-600">
             Saint-Just-Saint-Rambert · Loire (42)
           </p>
@@ -123,15 +126,17 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[80vh] flex-1 overflow-hidden bg-sand-100">
-          <Image
-            src="/images/hero-cours.jpg"
-            alt="Cours de yoga vinyasa à Saint-Just-Saint-Rambert · Flow Yoga Loire"
-            fill
-            className="scale-[1.18] object-cover object-[42%_38%]"
-            priority
-            sizes="55vw"
-          />
+        <div className="flex flex-1 items-stretch bg-sand-50 p-5 lg:p-8">
+          <div className="relative min-h-[72vh] w-full overflow-hidden rounded-[2rem] shadow-[0_24px_60px_rgba(28,26,23,0.18)]">
+            <Image
+              src={HERO_IMAGE}
+              alt="Cours de yoga vinyasa à Saint-Just-Saint-Rambert · Flow Yoga Loire"
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="52vw"
+            />
+          </div>
         </div>
       </div>
 
