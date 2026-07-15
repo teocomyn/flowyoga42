@@ -11,6 +11,7 @@ type PageHeroProps = {
   description?: string;
   align?: "left" | "center";
   size?: "default" | "tall";
+  tone?: "dark" | "light";
   children?: ReactNode;
 };
 
@@ -22,41 +23,104 @@ export function PageHero({
   description,
   align = "center",
   size = "tall",
+  tone = "dark",
   children,
 }: PageHeroProps) {
+  if (tone === "light") {
+    const alignClass =
+      align === "center" ? "text-center items-center" : "text-left items-start";
+
+    return (
+      <section className="bg-wash-cream px-4 pb-4 pt-24 md:px-6 md:pt-28">
+        <div className="mx-auto max-w-[1320px] overflow-hidden rounded-hero bg-wash-cream shadow-[0_24px_60px_rgba(28,26,23,0.1)]">
+          <div
+            className={`flex flex-col ${
+              size === "tall" ? "md:min-h-[64vh]" : "md:min-h-[52vh]"
+            } md:flex-row`}
+          >
+            <Container
+              className={`flex flex-1 flex-col justify-center py-10 md:max-w-[48%] md:py-14 ${alignClass}`}
+            >
+              <p
+                className={`pill-tag mb-5 w-fit border-sand-200/80 bg-sand-50 text-clay-600 ${
+                  align === "center" ? "mx-auto" : ""
+                }`}
+              >
+                {label}
+              </p>
+              <SplitHeading
+                as="h1"
+                className={`max-w-3xl text-ink-900 ${align === "center" ? "mx-auto" : ""}`}
+              >
+                {title}
+              </SplitHeading>
+              {description ? (
+                <p
+                  className={`mt-5 max-w-xl text-[17px] leading-relaxed text-ink-600 ${
+                    align === "center" ? "mx-auto" : ""
+                  }`}
+                >
+                  {description}
+                </p>
+              ) : null}
+              {children ? (
+                <div className={`mt-8 ${align === "center" ? "mx-auto" : ""}`}>
+                  {children}
+                </div>
+              ) : null}
+            </Container>
+
+            <div className="relative aspect-[16/11] max-h-[220px] w-full md:aspect-auto md:max-h-none md:min-h-[52vh] md:flex-1">
+              <Image
+                src={image}
+                alt={imageAlt}
+                fill
+                className="object-cover object-[center_20%]"
+                priority
+                sizes="(max-width: 768px) 100vw, 52vw"
+              />
+              <div
+                className="absolute inset-y-0 left-0 hidden w-20 bg-gradient-to-r from-wash-cream to-transparent md:block"
+                aria-hidden="true"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   const heightClass =
     size === "tall"
-      ? "min-h-[62vh] md:min-h-[72vh]"
-      : "min-h-[50vh] md:min-h-[56vh]";
+      ? "min-h-[52vh] md:min-h-[68vh]"
+      : "min-h-[44vh] md:min-h-[54vh]";
   const alignClass =
     align === "center" ? "text-center items-center" : "text-left items-start";
 
   return (
     <section className="px-4 pb-4 pt-24 md:px-6 md:pt-28">
       <div
-        className={`relative flex ${heightClass} items-end overflow-hidden rounded-hero hero-grain shadow-[0_24px_60px_rgba(28,26,23,0.1)]`}
+        className={`relative mx-auto flex max-w-[1320px] ${heightClass} items-end overflow-hidden rounded-hero shadow-[0_24px_60px_rgba(28,26,23,0.1)]`}
       >
         <Image
           src={image}
           alt={imageAlt}
           fill
-          className="object-cover scale-105"
+          className="object-cover"
           priority
           sizes="100vw"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-ink-900/88 via-blush-900/45 to-blush-600/15"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-ink-900/30 via-transparent to-transparent"
+          className="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/35 to-ink-900/5"
           aria-hidden="true"
         />
         <Container
-          className={`relative z-10 flex flex-col pb-14 pt-24 md:pb-20 md:pt-28 ${alignClass}`}
+          className={`relative z-10 flex flex-col pb-10 pt-16 md:pb-16 md:pt-20 ${alignClass}`}
         >
           <p
-            className={`pill-tag mb-5 border-sand-100/20 bg-sand-50/10 text-sand-100/90 backdrop-blur-sm ${align === "center" ? "mx-auto" : ""}`}
+            className={`pill-tag mb-5 border-sand-100/20 bg-sand-50/10 text-sand-100/90 backdrop-blur-sm ${
+              align === "center" ? "mx-auto" : ""
+            }`}
           >
             {label}
           </p>
@@ -68,7 +132,7 @@ export function PageHero({
           </SplitHeading>
           {description ? (
             <p
-              className={`mt-6 max-w-xl text-[17px] leading-relaxed text-sand-100/90 ${
+              className={`mt-5 max-w-xl text-[17px] leading-relaxed text-sand-100/90 ${
                 align === "center" ? "mx-auto" : ""
               }`}
             >
@@ -76,7 +140,7 @@ export function PageHero({
             </p>
           ) : null}
           {children ? (
-            <div className={`mt-10 ${align === "center" ? "mx-auto" : ""}`}>
+            <div className={`mt-8 ${align === "center" ? "mx-auto" : ""}`}>
               {children}
             </div>
           ) : null}

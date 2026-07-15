@@ -4,7 +4,7 @@ export const PAGE_HEROES = {
   cours: "/images/hero-cours.jpg",
   tarifs: "/images/hero-tarifs.jpg",
   ateliers: "/images/hero-evenements.jpg",
-  contact: "/images/salle-kinespace.jpg",
+  contact: "/images/hero-qui-suis-je.jpg",
 } as const;
 
 export const LOCATION_IMAGES: Record<

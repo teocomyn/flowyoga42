@@ -40,6 +40,7 @@ export default function BlogPage() {
         title="Blog Flow Yoga"
         description="Guides pratiques pour choisir votre yoga, comprendre les tarifs et découvrir les cours à Saint-Just-Saint-Rambert."
         align="left"
+        tone="light"
       />
 
       <section className="pb-[var(--spacing-section)]">

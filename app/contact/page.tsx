@@ -49,11 +49,12 @@ export default function ContactPage() {
 
       <PageHero
         image={PAGE_HEROES.contact}
-        imageAlt="Salle Kin'Espace · Flow Yoga Saint-Just-Saint-Rambert"
+        imageAlt="Floriane Relave Jamon · professeure Flow Yoga en Loire"
         label="Nous trouver · Loire (42)"
         title="Contact"
         description="Une question sur les cours, les tarifs ou les ateliers ? Floriane vous répond sous 48h."
         align="left"
+        tone="light"
       />
 
       <section className="pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">

@@ -66,6 +66,8 @@ export default function QuiSuisJePage() {
         label="Saint-Just-Saint-Rambert · Loire (42)"
         title="Présentations"
         description="Lieux de pratique et portrait de Floriane Relave Jamon, votre instructrice certifiée."
+        tone="light"
+        align="left"
       />
 
       <section className="bg-sand-50 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">

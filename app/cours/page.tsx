@@ -89,6 +89,9 @@ export default function CoursPage() {
         imageAlt="Cours de yoga Flow Yoga en Loire"
         label="Saint-Just-Saint-Rambert · Loire (42)"
         title="Cours & Planning"
+        description="Vinyasa, yin, restauratif, prénatal et enfants · 13 élèves maximum · planning 2026-2027."
+        tone="light"
+        align="left"
       />
 
       <section className="bg-sand-50 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
@@ -160,27 +163,13 @@ export default function CoursPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
-        <Image
-          src="/images/yoga-enfants-bg.jpg"
-          alt=""
-          fill
-          className="object-cover object-top"
-          sizes="100vw"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-blush-900/85 via-blush-900/70 to-transparent"
-          aria-hidden="true"
-        />
-        <Container className="relative">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-            <Reveal>
-              <p className="label text-sand-100">Flow Yoga propose également</p>
-              <h2 className="heading-section mt-4 text-sand-50">
-                Du Yoga Enfants
-              </h2>
-              <div className="prose-body mt-8 space-y-4 text-sand-100">
+      <section className="border-t border-sand-200 bg-gradient-to-b from-blush-50/40 via-sand-50 to-sand-50 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
+        <Container>
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-10">
+            <Reveal className="lg:col-span-5">
+              <p className="label text-clay-600">Flow Yoga propose également</p>
+              <h2 className="heading-section mt-4">Du Yoga Enfants</h2>
+              <div className="prose-body mt-6 space-y-4 text-ink-600">
                 <p>
                   Spécialisée dans la petite enfance, je propose des séances pour les{" "}
                   <strong>enfants</strong> (dès l&apos;âge de 4 ans en cours
@@ -189,44 +178,75 @@ export default function CoursPage() {
                   d&apos;Assistants Maternels).
                 </p>
                 <p>
-                  Ils se déroulent en fonction du nombre d&apos;inscrits et nous
-                  reprenons des <strong>postures d&apos;animaux</strong>, de{" "}
-                  <strong>végétation</strong> de manière ludique avec des supports
-                  tels que des <strong>cartes</strong>, des{" "}
-                  <strong>balles massantes</strong>, le son des{" "}
-                  <strong>bols tibétains</strong>, du <strong>Koshi</strong>…
+                  Nous reprenons des <strong>postures d&apos;animaux</strong> et de{" "}
+                  <strong>végétation</strong> de manière ludique, avec des{" "}
+                  <strong>cartes</strong>, des <strong>balles massantes</strong>, des{" "}
+                  <strong>bols tibétains</strong> et du <strong>Koshi</strong>.
                 </p>
                 <p>
-                  Les séances durent entre <strong>45 min et 1h à Kin&apos;Espace</strong>{" "}
-                  ou <strong>en extérieur</strong> quand le temps le permet. Il est
-                  nécessaire d&apos;<strong>apporter son tapis ou une serviette</strong>.
+                  Les séances durent entre <strong>45 min et 1h</strong> au{" "}
+                  <strong>Kin&apos;Espace</strong> ou <strong>en extérieur</strong> selon
+                  la météo. Pensez à apporter un tapis ou une serviette.
                 </p>
               </div>
-              <ul className="mt-8 space-y-3">
+
+              <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {ENFANTS_BENEFITS.map((text) => (
                   <li
                     key={text}
-                    className="border-l-2 border-sand-100/60 pl-4 text-[15px] italic text-sand-50"
+                    className="surface-card rounded-soft border border-sand-200/80 px-4 py-3 text-[15px] text-ink-700"
                   >
                     {text}
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/cours/enfants"
+                  className="inline-flex items-center justify-center rounded-full border border-sand-200 bg-sand-50 px-6 py-3 text-[15px] font-medium transition-colors hover:border-clay-400 hover:bg-wash-cream"
+                >
+                  Découvrir le cours
+                </Link>
+                <Link
+                  href="/tarifs"
+                  className="label transition-colors hover:text-clay-600"
+                >
+                  Tarifs enfants →
+                </Link>
+              </div>
             </Reveal>
 
-            <Reveal delay={0.1}>
-              <div className="surface-card overflow-hidden rounded-card">
-                <p className="px-5 pt-5 text-center font-serif text-lg text-clay-600">
-                  Ateliers enfants
-                </p>
-                <div className="relative mt-4 aspect-[4/3] w-full">
-                  <Image
-                    src="/images/enfants-atelier.jpg"
-                    alt="Atelier yoga enfants Flow Yoga"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
+            <Reveal delay={0.08} className="lg:col-span-7">
+              <div className="relative">
+                <div className="surface-card overflow-hidden rounded-card shadow-[0_20px_50px_rgba(28,26,23,0.08)]">
+                  <p className="border-b border-sand-200/80 px-6 py-4 text-center font-serif text-lg text-clay-600">
+                    Ateliers enfants
+                  </p>
+                  <div className="relative aspect-[4/3] w-full bg-wash-cream">
+                    <Image
+                      src="/images/enfants-atelier.jpg"
+                      alt="Atelier yoga enfants Flow Yoga"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 58vw"
+                    />
+                  </div>
+                  <p className="px-6 py-4 text-center text-[14px] text-ink-600">
+                    Dès 4 ans en collectif · 15 € · 12 € dès 2 enfants
+                  </p>
+                </div>
+
+                <div className="absolute -bottom-5 -left-3 hidden w-[38%] max-w-[180px] overflow-hidden rounded-image border-4 border-sand-50 shadow-[0_16px_40px_rgba(28,26,23,0.12)] md:block">
+                  <div className="relative aspect-[3/4]">
+                    <Image
+                      src="/images/yoga-enfants-bg.jpg"
+                      alt="Enfant en méditation lors d'un cours yoga"
+                      fill
+                      className="object-cover object-top"
+                      sizes="180px"
+                    />
+                  </div>
                 </div>
               </div>
             </Reveal>

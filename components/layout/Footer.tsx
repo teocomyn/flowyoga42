@@ -283,21 +283,6 @@ export function Footer() {
               ))}
             </div>
           </div>
-
-          <AnimatedContainer
-            delay={0.35}
-            className="relative mt-12 overflow-hidden rounded-[2rem] border border-sand-200/70 bg-gradient-to-br from-blush-50/80 via-sand-50 to-wash-cream px-6 py-8 md:px-10 md:py-10"
-          >
-            <p
-              className="pointer-events-none select-none font-serif text-[clamp(3rem,14vw,8rem)] leading-[0.82] tracking-tight text-sand-200"
-              aria-hidden="true"
-            >
-              {SITE_NAME}
-            </p>
-            <p className="relative -mt-2 max-w-xl text-[15px] text-ink-600 md:-mt-4">
-              Yoga au bord de la Loire · Loire (42)
-            </p>
-          </AnimatedContainer>
         </div>
       </div>
     </footer>

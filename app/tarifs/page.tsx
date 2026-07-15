@@ -7,6 +7,7 @@ import { FAQ } from "@/components/ui/FAQ";
 import { EarlyBirdBadge, EarlyBirdDeadline } from "@/components/ui/EarlyBirdBadge";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { PricingTableFull } from "@/components/ui/PricingTable";
+import { SpecialPricingSection } from "@/components/tarifs/SpecialPricingSection";
 import { Button, ReservationButton } from "@/components/ui/Button";
 import { PageHero } from "@/components/shared/PageHero";
 import { FinalCTASection } from "@/components/shared/FinalCTASection";
@@ -58,52 +59,50 @@ export default function TarifsPage() {
         label={`Saison 2026-2027 · dès le ${SEASON_START}`}
         title="Tarifs"
         description="Séances à l'unité, carnets et formules prénatal, enfants et zoom. Early bird jusqu'au 27 septembre."
+        tone="light"
+        align="center"
       />
 
       <section className="bg-wash-sky pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
-            <Reveal className="lg:col-span-8">
-              <h2 className="heading-section">Adultes</h2>
-              <div className="prose-body mt-6 space-y-3">
-                <p>
-                  <strong>6 personnes inscrites mini/cours</strong>
-                </p>
-                <p>
-                  <strong>
-                    Tarif pour les couples ou 1 parent-1 ado + 14 ans
-                  </strong>{" "}
-                  vivant sous le même toit (me contacter)
-                </p>
-                <p className="italic">
-                  Possibilité de régler en plusieurs fois à partir de 20 séances
-                  (voir les{" "}
-                  <Link href="/cgv" className="underline">
-                    CGV
-                  </Link>
-                  ).
-                </p>
-              </div>
-              <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-card border border-sand-200 bg-white">
-                <Image
-                  src="/images/planning-vinyasa.png"
-                  alt="Planning Vinyasa 12h30-13h30 · tarifs Flow Yoga"
-                  fill
-                  className="object-contain p-2"
-                  sizes="(max-width: 1024px) 100vw, 66vw"
-                />
-              </div>
-            </Reveal>
+          <Reveal className="mx-auto flex max-w-3xl flex-col items-center text-center">
+            <EarlyBirdBadge />
+            <h2 className="heading-section mt-8">Adultes</h2>
+            <div className="prose-body mt-6 max-w-2xl space-y-3">
+              <p>
+                <strong>6 personnes inscrites mini/cours</strong>
+              </p>
+              <p>
+                <strong>
+                  Tarif pour les couples ou 1 parent-1 ado + 14 ans
+                </strong>{" "}
+                vivant sous le même toit (me contacter)
+              </p>
+              <p className="italic">
+                Possibilité de régler en plusieurs fois à partir de 20 séances
+                (voir les{" "}
+                <Link href="/cgv" className="underline">
+                  CGV
+                </Link>
+                ).
+              </p>
+            </div>
+            <Button href="/contact" variant="ghost" className="mt-6">
+              Une question ?
+            </Button>
+          </Reveal>
 
-            <Reveal className="lg:col-span-4" delay={0.1}>
-              <div className="flex flex-col items-end gap-4">
-                <EarlyBirdBadge />
-                <Button href="/contact" variant="ghost">
-                  Une question ?
-                </Button>
-              </div>
-            </Reveal>
-          </div>
+          <Reveal delay={0.08} className="mx-auto mt-10 max-w-4xl">
+            <div className="relative aspect-video w-full overflow-hidden rounded-card border border-sand-200 bg-white shadow-[0_20px_50px_rgba(28,26,23,0.06)]">
+              <Image
+                src="/images/planning-vinyasa.png"
+                alt="Planning Vinyasa 12h30-13h30 · tarifs Flow Yoga"
+                fill
+                className="object-contain p-3 md:p-4"
+                sizes="(max-width: 896px) 100vw, 896px"
+              />
+            </div>
+          </Reveal>
         </Container>
       </section>
 
@@ -161,45 +160,7 @@ export default function TarifsPage() {
         </Container>
       </section>
 
-      <section className="bg-wash-sky pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
-        <Container>
-          <Reveal>
-            <h2 className="heading-section">Enfants (dès 4 ans)</h2>
-            <div className="prose-body mt-6 space-y-3">
-              <p>
-                <strong>Ateliers proposés : jours à déterminer</strong>
-              </p>
-              <p>Règlement à l&apos;inscription de l&apos;atelier</p>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-      <section className="border-t border-sand-200 bg-wash-cream pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
-        <Container>
-          <Reveal>
-            <h2 className="heading-section">Autres formules</h2>
-            <div className="prose-body mt-6 space-y-4">
-              <p>
-                Chaque séance s&apos;effectue sur{" "}
-                <strong>réservation obligatoire</strong> : me contacter afin de
-                planifier la ou les date(s) et régler la prestation (voir les CGV).
-              </p>
-              <ul className="list-disc space-y-2 pl-5">
-                <li>
-                  <strong>Séance individuelle ou Duo</strong> : à Kin&apos;Espace, au
-                  Pôle ressources ou en extérieur (frais kilométriques en plus
-                  au-delà de St Just St Rambert et Chambles).
-                </li>
-                <li>
-                  <strong>Séance via l&apos;application ZOOM</strong> : me contacter
-                  pour le tarif et avoir le lien d&apos;accès à la séance.
-                </li>
-              </ul>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
+      <SpecialPricingSection />
 
       <section className="border-t border-sand-200 bg-sand-100 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
