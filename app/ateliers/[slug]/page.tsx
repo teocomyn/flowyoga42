@@ -134,12 +134,12 @@ export default async function AtelierDetailPage({ params }: PageProps) {
             </Reveal>
 
             <Reveal className="lg:col-span-6 lg:col-start-7" delay={0.1}>
-              <div className="surface-card relative aspect-[4/3] overflow-hidden rounded-card">
+              <div className="surface-card relative aspect-[4/5] overflow-hidden rounded-card bg-wash-cream">
                 <Image
                   src={atelier.image}
                   alt={atelier.imageAlt}
                   fill
-                  className="object-cover"
+                  className="object-contain p-4"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   priority
                 />

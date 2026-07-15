@@ -16,13 +16,13 @@ export function AtelierCard({ atelier, priority = false }: AtelierCardProps) {
     <article className="group surface-card flex h-full flex-col overflow-hidden rounded-card transition-transform duration-500 hover:-translate-y-1">
       <Link
         href={`/ateliers/${atelier.slug}`}
-        className="relative block aspect-[4/3] overflow-hidden rounded-t-card"
+        className="relative block aspect-[4/5] overflow-hidden rounded-t-card bg-wash-cream"
       >
         <Image
           src={atelier.image}
           alt={atelier.imageAlt}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          className="object-contain p-3 transition-transform duration-500 group-hover:scale-[1.02]"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority={priority}
         />
