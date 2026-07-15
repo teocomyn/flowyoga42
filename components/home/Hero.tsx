@@ -26,9 +26,9 @@ export function Hero() {
           <div className="relative aspect-[5/4] min-h-[42svh] max-h-[360px] overflow-hidden rounded-[1.75rem] shadow-[0_16px_40px_rgba(28,26,23,0.12)]">
             <Image
               src={HERO_IMAGE}
-              alt="Cours de yoga vinyasa à Saint-Just-Saint-Rambert · Flow Yoga Loire"
+              alt="Floriane Relave Jamon en posture de yoga · Flow Yoga Saint-Just-Saint-Rambert"
               fill
-              className="object-cover object-center"
+              className="object-cover object-[center_35%]"
               priority
               sizes="100vw"
             />
@@ -125,9 +125,9 @@ export function Hero() {
           <div className="relative min-h-[72vh] w-full overflow-hidden rounded-[2rem] shadow-[0_24px_60px_rgba(28,26,23,0.18)]">
             <Image
               src={HERO_IMAGE}
-              alt="Cours de yoga vinyasa à Saint-Just-Saint-Rambert · Flow Yoga Loire"
+              alt="Floriane Relave Jamon en posture de yoga · Flow Yoga Saint-Just-Saint-Rambert"
               fill
-              className="object-cover object-center"
+              className="object-cover object-[center_35%]"
               priority
               sizes="52vw"
             />
