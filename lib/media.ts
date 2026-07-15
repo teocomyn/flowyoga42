@@ -1,5 +1,5 @@
 export const PAGE_HEROES = {
-  home: "/images/hero-loire-guinguette.jpg",
+  home: "/images/hero-cours.jpg",
   presentations: "/images/hero-qui-suis-je.jpg",
   cours: "/images/hero-cours.jpg",
   tarifs: "/images/hero-tarifs.jpg",
