@@ -9,7 +9,7 @@ export function EventsSection() {
   const events = getUpcomingAteliers(3);
 
   return (
-    <section className="border-t border-sand-200 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
+    <section className="relative overflow-hidden border-t border-sand-200 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
       <Image
         src="/images/cta-mandala.jpg"
         alt=""

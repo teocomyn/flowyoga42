@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
-import { SplitHeading } from "@/components/motion/SplitHeading";
 import { ReservationButton } from "@/components/ui/Button";
 import { PAGE_HEROES } from "@/lib/media";
 
@@ -86,13 +85,9 @@ export function Hero() {
             Saint-Just-Saint-Rambert · Loire (42)
           </p>
 
-          <SplitHeading
-            as="h1"
-            className="mt-5 max-w-xl text-[clamp(2.25rem,4vw,4.5rem)] text-ink-900"
-            delay={0.08}
-          >
+          <h1 className="mt-5 max-w-xl font-serif text-[clamp(2.25rem,4vw,4.5rem)] leading-[0.98] text-ink-900">
             Yoga au bord de la Loire
-          </SplitHeading>
+          </h1>
 
           <p className="mt-5 max-w-lg text-[18px] font-medium leading-snug text-ink-900">
             Cours de yoga à Saint-Just-Saint-Rambert · vinyasa, yin,
