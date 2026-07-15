@@ -26,12 +26,12 @@ export function Hero() {
               src="/images/hero-cours.jpg"
               alt="Cours de yoga vinyasa à Saint-Just-Saint-Rambert · Flow Yoga Loire"
               fill
-              className="object-cover object-[62%_20%] saturate-[1.05] contrast-[1.03]"
+              className="scale-105 object-cover object-[42%_38%]"
               priority
               sizes="100vw"
             />
             <div
-              className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink-900/75 via-ink-900/25 to-transparent px-5 pb-5 pt-16"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink-900/80 to-transparent"
               aria-hidden="true"
             />
             <div className="absolute inset-x-0 bottom-0 px-5 pb-5">
@@ -123,18 +123,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[80vh] flex-1">
+        <div className="relative min-h-[80vh] flex-1 overflow-hidden bg-sand-100">
           <Image
             src="/images/hero-cours.jpg"
             alt="Cours de yoga vinyasa à Saint-Just-Saint-Rambert · Flow Yoga Loire"
             fill
-            className="object-cover object-[62%_22%] saturate-[1.05] contrast-[1.03]"
+            className="scale-[1.18] object-cover object-[42%_38%]"
             priority
             sizes="55vw"
-          />
-          <div
-            className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-wash-cream/50 to-transparent"
-            aria-hidden="true"
           />
         </div>
       </div>
