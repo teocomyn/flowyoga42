@@ -163,6 +163,34 @@
     backdrop-filter: blur(12px);
   }
 
+  .header-shell {
+    border: 1px solid color-mix(in srgb, var(--color-sand-200) 65%, white);
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-sand-50) 94%, white) 0%,
+      color-mix(in srgb, var(--color-blush-50) 35%, var(--color-sand-50)) 100%
+    );
+    box-shadow:
+      0 1px 0 color-mix(in srgb, white 80%, transparent) inset,
+      0 18px 48px rgba(28, 26, 23, 0.08);
+    backdrop-filter: blur(20px) saturate(1.15);
+  }
+
+  .header-shell-scrolled {
+    border-color: color-mix(in srgb, var(--color-sand-200) 85%, transparent);
+    background: color-mix(in srgb, var(--color-sand-50) 96%, white);
+    box-shadow:
+      0 1px 0 color-mix(in srgb, white 70%, transparent) inset,
+      0 22px 56px rgba(28, 26, 23, 0.12);
+  }
+
+  .header-nav-dock {
+    border: 1px solid color-mix(in srgb, var(--color-sand-200) 55%, transparent);
+    background: color-mix(in srgb, var(--color-sand-50) 72%, white);
+    box-shadow: 0 1px 0 color-mix(in srgb, white 65%, transparent) inset;
+    backdrop-filter: blur(10px);
+  }
+
   .pill-tag {
     display: inline-flex;
     align-items: center;

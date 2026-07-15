@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { MOMOYOGA_URL } from "@/lib/constants";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
@@ -27,7 +27,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-medium tracking-wide transition-colors duration-300";
+    "group inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-medium tracking-wide transition-all duration-300 hover:-translate-y-px";
 
   const dataAttrs = ctaLocation
     ? { "data-cta": "reservation", "data-location": ctaLocation }
@@ -68,9 +68,11 @@ export function Button({
 export function ReservationButton({
   location,
   className = "",
+  children,
 }: {
   location: string;
   className?: string;
+  children?: ReactNode;
 }) {
   return (
     <Button
@@ -79,7 +81,17 @@ export function ReservationButton({
       ctaLocation={location}
       className={className}
     >
-      Réserver un cours
+      {children ?? (
+        <>
+          Réserver un cours
+          <span
+            className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-ink-900/10 text-[13px] leading-none transition-colors group-hover:bg-ink-900/15"
+            aria-hidden="true"
+          >
+            →
+          </span>
+        </>
+      )}
     </Button>
   );
 }
