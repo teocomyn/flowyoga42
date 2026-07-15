@@ -215,7 +215,7 @@ export default function CoursPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="surface-card overflow-hidden rounded-sm">
+              <div className="surface-card overflow-hidden rounded-card">
                 <p className="px-5 pt-5 text-center font-serif text-lg text-clay-600">
                   Ateliers enfants
                 </p>
@@ -269,18 +269,14 @@ export default function CoursPage() {
             <p className="label mb-6">Toutes les pratiques</p>
             <h2 className="font-serif">Choisir sa pratique</h2>
           </Reveal>
-          <div className="mt-12 grid grid-cols-1 gap-px bg-sand-200 md:grid-cols-2">
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
             {COURSES.map((course, index) => (
-              <Reveal
-                key={course.slug}
-                delay={index * 0.05}
-                className="group bg-sand-50"
-              >
+              <Reveal key={course.slug} delay={index * 0.05}>
                 <Link
                   href={`/cours/${course.slug}`}
-                  className="flex h-full flex-col md:flex-row"
+                  className="group surface-card flex h-full flex-col overflow-hidden rounded-card transition-transform duration-500 hover:-translate-y-1 md:flex-row"
                 >
-                  <div className="relative aspect-[16/10] w-full shrink-0 md:aspect-auto md:h-auto md:w-48">
+                  <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden rounded-t-card md:aspect-auto md:h-auto md:w-52 md:rounded-l-card md:rounded-tr-none">
                     <Image
                       src={course.image}
                       alt={course.imageAlt}

@@ -96,8 +96,8 @@ export function PricingTableFull() {
   const additionalAdultes = ADULTES_PLANS.filter((p) => !featuredIds.has(p.id));
 
   return (
-    <details className="group">
-      <summary className="flex cursor-pointer list-none items-center justify-between border border-sand-200 px-6 py-4 text-[15px] font-medium text-ink-900 [&::-webkit-details-marker]:hidden">
+    <details className="group surface-card overflow-hidden rounded-card">
+      <summary className="flex cursor-pointer list-none items-center justify-between rounded-card px-6 py-4 text-[15px] font-medium text-ink-900 [&::-webkit-details-marker]:hidden">
         <span>Voir tous les tarifs détaillés</span>
         <span
           className="text-clay-400 transition-transform duration-300 group-open:rotate-45"
@@ -107,7 +107,7 @@ export function PricingTableFull() {
         </span>
       </summary>
 
-      <div className="border border-t-0 border-sand-200 p-6 md:p-8">
+      <div className="border-t border-sand-200/80 px-6 py-6 md:p-8">
         {additionalAdultes.length > 0 && (
           <PricingTableSection
             title="Adultes présentiel · autres formules"
@@ -122,7 +122,7 @@ export function PricingTableFull() {
           plans={INDIVIDUEL_PLANS}
         />
 
-        <div className="mt-12 border border-sand-200 p-6">
+        <div className="mt-12 rounded-card border border-sand-200/80 bg-sand-50 p-6">
           <h3 className="font-serif text-xl tracking-tight">
             {STRUCTURES_INFO.title}
           </h3>

@@ -69,7 +69,7 @@ export function Hero() {
   );
 
   return (
-    <section className="relative flex min-h-[100svh] items-end overflow-hidden hero-grain">
+    <section className="relative flex min-h-[100svh] items-end overflow-hidden hero-grain pt-24 md:mx-5 md:mt-28 md:min-h-[78vh] md:rounded-hero md:shadow-[0_28px_70px_rgba(28,26,23,0.12)]">
       <div className="absolute inset-0">
         <Image
           src="/images/hero-loire-guinguette.jpg"
@@ -86,7 +86,7 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="container-grid relative z-10 w-full pb-16 pt-32 md:pb-24">
+      <div className="container-grid relative z-10 w-full pb-16 pt-8 md:pb-24">
         <FlowLogoMark animate={playAnimation} />
         <p className="label mb-6 text-sand-100">
           Saint-Just-Saint-Rambert · Loire (42)

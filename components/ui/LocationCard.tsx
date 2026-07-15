@@ -21,8 +21,8 @@ export function LocationCard({
   imageAlt,
 }: LocationCardProps) {
   return (
-    <Reveal as="article" className="flex flex-col">
-      <div className="relative aspect-[16/10] overflow-hidden">
+    <Reveal as="article" className="surface-card overflow-hidden rounded-card">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-t-card">
         <Image
           src={image}
           alt={imageAlt}
@@ -31,7 +31,7 @@ export function LocationCard({
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
-      <div className="mt-6">
+      <div className="p-6 md:p-8">
         <h3 className="font-serif text-2xl tracking-tight">{name}</h3>
         <address className="mt-3 not-italic text-[15px] leading-relaxed text-ink-600">
           {address}

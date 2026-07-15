@@ -146,7 +146,7 @@ function Step<T extends string>({ title, options, onSelect }: StepProps<T>) {
             key={option.id}
             type="button"
             onClick={() => onSelect(option.id)}
-            className="border border-sand-200 px-6 py-4 text-left text-[15px] text-ink-900 transition-colors hover:border-clay-400 hover:bg-sand-100"
+            className="rounded-2xl border border-sand-200 bg-sand-50 px-6 py-4 text-left text-[15px] text-ink-900 transition-all hover:-translate-y-0.5 hover:border-clay-400 hover:bg-sand-100 hover:shadow-[0_10px_24px_rgba(28,26,23,0.06)]"
           >
             {option.label}
           </button>
@@ -175,7 +175,7 @@ export function PracticeFinder() {
   };
 
   return (
-    <div className="border border-sand-200 bg-sand-100 p-8 md:p-12">
+    <div className="surface-card overflow-hidden rounded-card p-8 md:p-12">
       <p className="label mb-4">Est-ce que c&apos;est pour moi ?</p>
       <h2 className="font-serif text-[clamp(1.75rem,4vw,2.5rem)] leading-none tracking-tight">
         Trouver ma pratique
@@ -232,7 +232,7 @@ export function PracticeFinder() {
                 {recommendation.practice}
               </p>
               <p className="prose-body mt-4">{recommendation.reason}</p>
-              <div className="mt-6 border border-sand-200 bg-sand-50 p-6">
+              <div className="mt-6 rounded-2xl border border-sand-200 bg-sand-50 p-6">
                 <p className="text-[15px] font-medium text-ink-900">
                   {recommendation.plan}
                 </p>

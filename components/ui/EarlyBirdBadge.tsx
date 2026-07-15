@@ -34,7 +34,7 @@ export function EarlyBirdBadge() {
   if (!active) return null;
 
   return (
-    <span className="inline-flex items-center gap-2 border border-clay-400 px-3 py-1 text-[11px] font-medium tracking-[0.12em] text-clay-600 uppercase">
+    <span className="pill-tag text-clay-600">
       Early bird jusqu&apos;au 27/09
       {daysLeft > 0 && (
         <span className="normal-case tracking-normal text-ink-600">

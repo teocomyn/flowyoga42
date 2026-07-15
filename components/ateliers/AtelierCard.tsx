@@ -13,10 +13,10 @@ export function AtelierCard({ atelier, priority = false }: AtelierCardProps) {
     (atelier.price !== null ? `${atelier.price} €` : "Sur inscription");
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden border border-sand-200 bg-sand-50 transition-shadow duration-300 hover:shadow-[0_20px_38px_rgba(173,31,95,0.12)]">
+    <article className="group surface-card flex h-full flex-col overflow-hidden rounded-card transition-transform duration-500 hover:-translate-y-1">
       <Link
         href={`/ateliers/${atelier.slug}`}
-        className="relative block aspect-square overflow-hidden"
+        className="relative block aspect-[4/3] overflow-hidden rounded-t-card"
       >
         <Image
           src={atelier.image}

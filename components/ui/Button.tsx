@@ -11,11 +11,11 @@ type ButtonProps = ComponentPropsWithoutRef<"a"> & {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-clay-400 text-ink-900 hover:bg-clay-600 hover:text-sand-50 border border-clay-400",
+    "bg-clay-400 text-ink-900 hover:bg-clay-600 hover:text-sand-50 border border-clay-400 shadow-[0_10px_24px_rgba(154,123,90,0.22)]",
   secondary:
-    "bg-transparent text-moss-500 border border-moss-500 hover:bg-moss-500 hover:text-sand-50",
+    "bg-sand-50/80 text-moss-500 border border-moss-500/40 hover:bg-moss-500 hover:text-sand-50 shadow-[0_8px_20px_rgba(28,26,23,0.06)]",
   ghost:
-    "bg-transparent text-ink-900 border border-sand-200 hover:border-clay-400",
+    "bg-sand-50/60 text-ink-900 border border-sand-200 hover:border-clay-400 hover:bg-sand-100",
 };
 
 export function Button({

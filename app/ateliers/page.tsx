@@ -83,7 +83,7 @@ export default function AteliersPage() {
 
               <aside className="lg:col-span-4">
                 <Reveal>
-                  <div className="sticky top-28 space-y-8 surface-card rounded-sm p-8">
+                  <div className="sticky top-28 space-y-8 surface-card rounded-card p-8">
                     <div>
                       <p className="label mb-4 text-blush-600">Mois de mai</p>
                       <p className="font-serif text-lg leading-relaxed text-ink-900">

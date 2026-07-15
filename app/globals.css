@@ -26,15 +26,16 @@
   --spacing-container-x: clamp(1.5rem, 5vw, 6rem);
 
   --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --radius-pill: 9999px;
+  --radius-soft: 1.25rem;
+  --radius-image: 1.75rem;
+  --radius-card: 2rem;
+  --radius-hero: 2.5rem;
+  --radius-shell: 3rem;
 }
 
 @layer base {
-  *,
-  *::before,
-  *::after {
-    border-radius: 0;
-  }
-
   html {
     scroll-behavior: smooth;
     background-color: var(--color-sand-50);
@@ -87,12 +88,13 @@
 
   img,
   video {
-    border-radius: 2px;
+    height: auto;
   }
 
   :focus-visible {
     outline: 2px solid var(--color-clay-400);
     outline-offset: 3px;
+    border-radius: var(--radius-soft);
   }
 
   ::selection {
@@ -122,9 +124,54 @@
   }
 
   .surface-card {
-    border: 1px solid var(--color-sand-200);
-    background-color: color-mix(in srgb, var(--color-sand-50) 92%, transparent);
-    box-shadow: 0 20px 38px rgba(173, 31, 95, 0.1);
+    border: 1px solid color-mix(in srgb, var(--color-sand-200) 80%, transparent);
+    background-color: color-mix(in srgb, var(--color-sand-50) 94%, transparent);
+    border-radius: var(--radius-card);
+    box-shadow: 0 16px 40px rgba(173, 31, 95, 0.08);
+  }
+
+  .rounded-card {
+    border-radius: var(--radius-card);
+  }
+
+  .rounded-t-card {
+    border-top-left-radius: var(--radius-card);
+    border-top-right-radius: var(--radius-card);
+  }
+
+  .rounded-l-card {
+    border-top-left-radius: var(--radius-card);
+    border-bottom-left-radius: var(--radius-card);
+  }
+
+  .rounded-image {
+    border-radius: var(--radius-image);
+  }
+
+  .rounded-hero {
+    border-radius: var(--radius-hero);
+  }
+
+  .rounded-shell {
+    border-radius: var(--radius-shell);
+  }
+
+  .glass-surface {
+    border: 1px solid color-mix(in srgb, var(--color-sand-200) 70%, transparent);
+    background-color: color-mix(in srgb, var(--color-sand-50) 88%, transparent);
+    backdrop-filter: blur(12px);
+  }
+
+  .pill-tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius-pill);
+    border: 1px solid color-mix(in srgb, var(--color-sand-200) 80%, transparent);
+    padding: 0.35rem 0.9rem;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 
   .hero-grain::after {

@@ -42,7 +42,7 @@ function MobileDayAccordion({
         {entries.map((entry) => (
           <li
             key={`${entry.day}-${entry.time}-${entry.practice}`}
-            className="border border-sand-200 p-4"
+            className="rounded-2xl border border-sand-200 bg-sand-50 p-4"
           >
             <p className="text-[15px] font-medium text-ink-900">
               {entry.time} – {entry.endTime} · {entry.practice}
@@ -78,7 +78,7 @@ export function ScheduleTable({
         <p className="prose-body mb-8 text-[15px]">{SCHEDULE_NOTE}</p>
       )}
 
-      <div className="hidden md:block">
+      <div className="hidden overflow-hidden rounded-card border border-sand-200/80 md:block">
         <table className="w-full text-left">
           <caption className="sr-only">
             Planning hebdomadaire des cours de yoga à Saint-Just-Saint-Rambert

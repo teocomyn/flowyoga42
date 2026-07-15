@@ -26,60 +26,62 @@ export function PageHero({
 }: PageHeroProps) {
   const heightClass =
     size === "tall"
-      ? "min-h-[68vh] md:min-h-[78vh]"
-      : "min-h-[55vh] md:min-h-[60vh]";
+      ? "min-h-[62vh] md:min-h-[72vh]"
+      : "min-h-[50vh] md:min-h-[56vh]";
   const alignClass =
     align === "center" ? "text-center items-center" : "text-left items-start";
 
   return (
-    <section
-      className={`relative flex ${heightClass} items-end overflow-hidden hero-grain`}
-    >
-      <Image
-        src={image}
-        alt={imageAlt}
-        fill
-        className="object-cover scale-105"
-        priority
-        sizes="100vw"
-      />
+    <section className="px-4 pb-4 pt-24 md:px-6 md:pt-28">
       <div
-        className="absolute inset-0 bg-gradient-to-t from-ink-900/88 via-blush-900/45 to-blush-600/15"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-ink-900/30 via-transparent to-transparent"
-        aria-hidden="true"
-      />
-      <Container
-        className={`relative z-10 flex flex-col pb-20 pt-36 md:pb-28 ${alignClass}`}
+        className={`relative flex ${heightClass} items-end overflow-hidden rounded-hero hero-grain shadow-[0_24px_60px_rgba(28,26,23,0.1)]`}
       >
-        <p
-          className={`label mb-4 text-sand-100/90 ${align === "center" ? "mx-auto" : ""}`}
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          className="object-cover scale-105"
+          priority
+          sizes="100vw"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-ink-900/88 via-blush-900/45 to-blush-600/15"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-ink-900/30 via-transparent to-transparent"
+          aria-hidden="true"
+        />
+        <Container
+          className={`relative z-10 flex flex-col pb-14 pt-24 md:pb-20 md:pt-28 ${alignClass}`}
         >
-          {label}
-        </p>
-        <SplitHeading
-          as="h1"
-          className={`max-w-4xl text-sand-50 ${align === "center" ? "mx-auto" : ""}`}
-        >
-          {title}
-        </SplitHeading>
-        {description ? (
           <p
-            className={`mt-6 max-w-xl text-[17px] leading-relaxed text-sand-100/90 ${
-              align === "center" ? "mx-auto" : ""
-            }`}
+            className={`pill-tag mb-5 border-sand-100/20 bg-sand-50/10 text-sand-100/90 backdrop-blur-sm ${align === "center" ? "mx-auto" : ""}`}
           >
-            {description}
+            {label}
           </p>
-        ) : null}
-        {children ? (
-          <div className={`mt-10 ${align === "center" ? "mx-auto" : ""}`}>
-            {children}
-          </div>
-        ) : null}
-      </Container>
+          <SplitHeading
+            as="h1"
+            className={`max-w-4xl text-sand-50 ${align === "center" ? "mx-auto" : ""}`}
+          >
+            {title}
+          </SplitHeading>
+          {description ? (
+            <p
+              className={`mt-6 max-w-xl text-[17px] leading-relaxed text-sand-100/90 ${
+                align === "center" ? "mx-auto" : ""
+              }`}
+            >
+              {description}
+            </p>
+          ) : null}
+          {children ? (
+            <div className={`mt-10 ${align === "center" ? "mx-auto" : ""}`}>
+              {children}
+            </div>
+          ) : null}
+        </Container>
+      </div>
     </section>
   );
 }

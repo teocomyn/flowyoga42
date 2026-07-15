@@ -42,7 +42,7 @@ export function ParallaxImage({
   return (
     <motion.div
       ref={ref}
-      className={`relative overflow-hidden ${className}`}
+      className={`relative overflow-hidden rounded-image ${className}`}
       style={{ aspectRatio }}
       initial={prefersReducedMotion ? false : { opacity: 0, scale: 1.06 }}
       whileInView={prefersReducedMotion ? undefined : revealAnimate}

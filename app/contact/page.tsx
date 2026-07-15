@@ -79,7 +79,7 @@ export default function ContactPage() {
                 structure : décrivez votre demande, nous revenons vers vous
                 rapidement.
               </p>
-              <div className="mt-8 surface-card rounded-sm p-6 md:p-8">
+              <div className="mt-8 surface-card rounded-card p-6 md:p-8">
                 <ContactForm />
               </div>
             </Reveal>
@@ -144,7 +144,7 @@ export default function ContactPage() {
               15 place Gapiand · Saint-Just-Saint-Rambert
             </p>
           </Reveal>
-          <Reveal className="mt-8 overflow-hidden rounded-sm border border-sand-200">
+          <Reveal className="mt-8 overflow-hidden rounded-card border border-sand-200">
             <ContactMap />
           </Reveal>
         </Container>

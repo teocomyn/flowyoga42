@@ -5,7 +5,7 @@ import { submitContactForm } from "@/app/contact/actions";
 import { initialContactState } from "@/lib/validations/contact";
 
 const inputStyles =
-  "w-full border border-sand-200 bg-sand-50 px-4 py-3 text-[15px] text-ink-900 placeholder:text-ink-600/50 transition-colors focus:border-clay-400";
+  "w-full rounded-2xl border border-sand-200 bg-sand-50 px-5 py-3.5 text-[15px] text-ink-900 placeholder:text-ink-600/50 transition-colors focus:border-clay-400";
 
 const labelStyles = "label mb-2 block";
 

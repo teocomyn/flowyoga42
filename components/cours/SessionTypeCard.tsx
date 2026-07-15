@@ -27,7 +27,7 @@ export function SessionTypeCard({
     <Reveal delay={delay} className={featured ? "lg:col-span-2" : undefined}>
       <Link
         href={href}
-        className="group surface-card flex h-full flex-col overflow-hidden rounded-sm transition-transform duration-500 hover:-translate-y-1"
+        className="group surface-card flex h-full flex-col overflow-hidden rounded-card transition-transform duration-500 hover:-translate-y-1"
       >
         <p className="px-5 pt-5 text-center font-serif text-lg text-clay-600">
           {title}

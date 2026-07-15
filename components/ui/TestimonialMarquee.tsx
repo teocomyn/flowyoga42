@@ -6,12 +6,12 @@ export function TestimonialMarquee() {
   const items = [...TESTIMONIALS, ...TESTIMONIALS];
 
   return (
-    <div className="relative overflow-hidden border-y border-sand-200 py-10">
-      <div className="group flex w-max animate-marquee gap-8 pause-animation hover:[animation-play-state:paused]">
+    <div className="relative overflow-hidden py-10">
+      <div className="group flex w-max animate-marquee gap-6 pause-animation hover:[animation-play-state:paused]">
         {items.map((testimonial, index) => (
           <figure
             key={`${testimonial.id}-${index}`}
-            className="w-[min(85vw,420px)] shrink-0 border border-sand-200 p-8"
+            className="surface-card w-[min(85vw,420px)] shrink-0 rounded-card p-8"
             aria-hidden={index >= TESTIMONIALS.length}
           >
             <blockquote className="font-serif text-xl leading-snug tracking-tight text-ink-900">

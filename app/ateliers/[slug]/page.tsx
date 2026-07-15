@@ -73,7 +73,7 @@ export default async function AtelierDetailPage({ params }: PageProps) {
 
       <div className="pb-[var(--spacing-section)]">
         <Container>
-          <nav aria-label="Fil d'Ariane" className="label mb-12 pt-[var(--spacing-section)]">
+          <nav aria-label="Fil d'Ariane" className="label mb-12 pt-10">
             <ol className="flex flex-wrap gap-2">
               <li>
                 <Link href="/" className="hover:text-clay-600">
@@ -102,7 +102,7 @@ export default async function AtelierDetailPage({ params }: PageProps) {
                 </p>
               ))}
 
-              <dl className="surface-card mt-10 space-y-4 rounded-sm p-8">
+              <dl className="surface-card mt-10 space-y-4 rounded-card p-8">
                 <div className="flex justify-between gap-4 text-[15px]">
                   <dt className="text-ink-600">Durée</dt>
                   <dd className="font-medium text-ink-900">{atelier.duration}</dd>
@@ -134,7 +134,7 @@ export default async function AtelierDetailPage({ params }: PageProps) {
             </Reveal>
 
             <Reveal className="lg:col-span-6 lg:col-start-7" delay={0.1}>
-              <div className="surface-card relative aspect-[4/3] overflow-hidden rounded-sm">
+              <div className="surface-card relative aspect-[4/3] overflow-hidden rounded-card">
                 <Image
                   src={atelier.image}
                   alt={atelier.imageAlt}
@@ -145,7 +145,7 @@ export default async function AtelierDetailPage({ params }: PageProps) {
                 />
               </div>
 
-              <div className="surface-card mt-8 rounded-sm p-8">
+              <div className="surface-card mt-8 rounded-card p-8">
                 <p className="label mb-4">Au programme</p>
                 <ul className="space-y-3">
                   {atelier.highlights.map((item) => (

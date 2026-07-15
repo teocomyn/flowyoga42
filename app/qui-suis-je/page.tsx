@@ -106,7 +106,7 @@ export default function QuiSuisJePage() {
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             {ROOMS.map((room, index) => (
               <Reveal key={room.title} delay={index * 0.08}>
-                <figure className="group surface-card overflow-hidden rounded-sm">
+                <figure className="group surface-card overflow-hidden rounded-card">
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
                       src={LOCATION_IMAGES[room.id].src}
@@ -133,7 +133,7 @@ export default function QuiSuisJePage() {
           </Reveal>
 
           <Reveal className="mx-auto mt-12 max-w-3xl" delay={0.1}>
-            <div className="surface-card overflow-hidden rounded-sm p-8 md:p-14">
+            <div className="surface-card overflow-hidden rounded-card p-8 md:p-14">
               <div className="mx-auto w-48">
                 <div className="relative aspect-square overflow-hidden rounded-full">
                   <Image

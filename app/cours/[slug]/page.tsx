@@ -98,7 +98,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
 
       <div className="pb-[var(--spacing-section)]">
         <Container>
-          <nav aria-label="Fil d'Ariane" className="label mb-12 pt-[var(--spacing-section)]">
+          <nav aria-label="Fil d'Ariane" className="label mb-12 pt-10">
             <ol className="flex flex-wrap gap-2">
               <li>
                 <Link href="/" className="hover:text-clay-600">
@@ -133,7 +133,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
             </Reveal>
 
             <Reveal className="lg:col-span-6 lg:col-start-7" delay={0.1}>
-              <div className="surface-card relative aspect-[4/5] overflow-hidden rounded-sm">
+              <div className="surface-card relative aspect-[4/5] overflow-hidden rounded-card">
                 <Image
                   src={course.image}
                   alt={course.imageAlt}
@@ -150,7 +150,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
         <section className="py-[var(--spacing-section)]">
           <Container>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              <Reveal className="surface-card rounded-sm p-8">
+              <Reveal className="surface-card rounded-card p-8">
                 <p className="label mb-4">Pour qui ?</p>
                 <ul className="space-y-3">
                   {course.forWho.map((item) => (
@@ -163,7 +163,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
                   ))}
                 </ul>
               </Reveal>
-              <Reveal className="surface-card rounded-sm p-8" delay={0.1}>
+              <Reveal className="surface-card rounded-card p-8" delay={0.1}>
                 <p className="label mb-4">Bénéfices</p>
                 <ul className="space-y-3">
                   {course.benefits.map((item) => (
@@ -176,7 +176,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
                   ))}
                 </ul>
               </Reveal>
-              <Reveal className="surface-card rounded-sm p-8" delay={0.2}>
+              <Reveal className="surface-card rounded-card p-8" delay={0.2}>
                 <p className="label mb-4">Infos pratiques</p>
                 <ul className="space-y-3">
                   {course.practical.map((item) => (
@@ -206,7 +206,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
                 </p>
               </Reveal>
               <Reveal className="lg:col-span-6 lg:col-start-7" delay={0.1}>
-                <ul className="surface-card divide-y divide-sand-200 overflow-hidden rounded-sm">
+                <ul className="surface-card divide-y divide-sand-200 overflow-hidden rounded-card">
                   {course.pricing.map((item) => (
                     <li
                       key={item.label}

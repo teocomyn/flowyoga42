@@ -21,7 +21,7 @@ export function StickyCTA() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-40 border-t border-sand-200 bg-sand-50/95 px-4 py-3 backdrop-blur-md transition-transform duration-500 lg:hidden ${
+      className={`fixed inset-x-4 bottom-4 z-40 rounded-full border border-sand-200 bg-sand-50/95 px-4 py-3 shadow-[0_16px_40px_rgba(28,26,23,0.12)] backdrop-blur-md transition-transform duration-500 lg:hidden ${
         visible ? "translate-y-0" : "translate-y-full"
       }`}
       style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}

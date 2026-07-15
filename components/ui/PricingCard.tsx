@@ -26,15 +26,15 @@ export function PricingCard({
 
   return (
     <article
-      className={`flex h-full flex-col border p-8 ${
+      className={`flex h-full flex-col overflow-hidden rounded-card p-8 shadow-[0_16px_40px_rgba(28,26,23,0.06)] ${
         recommended
-          ? "border-clay-400 bg-sand-100"
-          : "border-sand-200 bg-sand-50"
+          ? "border border-clay-400/60 bg-sand-100"
+          : "surface-card"
       }`}
     >
       <div className="flex flex-wrap items-center gap-3">
         {recommended && (
-          <span className="label text-clay-600">Recommandé</span>
+          <span className="pill-tag text-clay-600">Recommandé</span>
         )}
         {hasEarlyBirdDiscount && <EarlyBirdBadge />}
       </div>

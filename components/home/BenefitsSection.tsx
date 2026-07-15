@@ -16,12 +16,12 @@ export function BenefitsSection() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 gap-px bg-sand-200 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {BENEFITS.map((benefit, index) => (
             <Reveal
               key={benefit.id}
               delay={index * 0.05}
-              className="bg-sand-100 p-8"
+              className="surface-card rounded-card p-8"
             >
               <p className="label mb-4">{String(index + 1).padStart(2, "0")}</p>
               <h3 className="font-serif text-xl tracking-tight">

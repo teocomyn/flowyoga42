@@ -84,7 +84,7 @@ export default function TarifsPage() {
                   ).
                 </p>
               </div>
-              <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-sm border border-sand-200 bg-white">
+              <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-card border border-sand-200 bg-white">
                 <Image
                   src="/images/planning-vinyasa.png"
                   alt="Planning Vinyasa 12h30-13h30 · tarifs Flow Yoga"

@@ -16,7 +16,7 @@ export function FAQ({ items, title = "Questions fréquentes" }: FAQProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <h2 className="font-serif">{title}</h2>
-      <div className="mt-8 divide-y divide-sand-200 border-y border-sand-200">
+      <div className="surface-card mt-8 divide-y divide-sand-200 overflow-hidden rounded-card px-6 md:px-8">
         {items.map((item) => (
           <details key={item.id} className="group py-6">
             <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-[17px] font-medium text-ink-900 [&::-webkit-details-marker]:hidden">

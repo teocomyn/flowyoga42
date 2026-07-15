@@ -29,7 +29,7 @@ export function FinalCTASection({
       />
 
       <Container className="relative">
-        <Reveal className="surface-card mx-auto max-w-3xl rounded-sm p-10 text-center md:p-14">
+        <Reveal className="surface-card mx-auto max-w-3xl rounded-shell p-10 text-center md:p-14">
           <p className="label mb-6 text-clay-600">Réserver</p>
           <SplitHeading as="h2" className="heading-section mx-auto">
             Cours ou atelier ?

@@ -43,7 +43,7 @@ export function IntroSection() {
           </div>
         </div>
 
-        <Reveal className="mt-20 border border-sand-200 bg-sand-100 p-8 md:p-10">
+        <Reveal className="surface-card mt-20 rounded-shell p-8 md:p-10">
           <p className="label mb-4">Première fois ?</p>
           <h3 className="font-serif text-2xl tracking-tight">
             Votre séance d&apos;essai à 19 €
