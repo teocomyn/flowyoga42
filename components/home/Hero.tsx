@@ -7,10 +7,10 @@ import { SplitHeading } from "@/components/motion/SplitHeading";
 import { ReservationButton } from "@/components/ui/Button";
 
 const HERO_HIGHLIGHTS = [
-  "Séance d'essai · 19 €",
-  "13 élèves max",
-  "Mar. → Ven.",
-  "Saint-Just · Loire",
+  "Essai · 19 €",
+  "13 max",
+  "Mar.–Ven.",
+  "Loire (42)",
 ] as const;
 
 export function Hero() {
@@ -18,15 +18,74 @@ export function Hero() {
 
   return (
     <section className="bg-wash-cream md:mx-5 md:mt-28 md:overflow-hidden md:rounded-hero md:shadow-[0_28px_70px_rgba(28,26,23,0.12)]">
-      <div className="flex flex-col md:min-h-[80vh] md:flex-row">
-        <div className="relative z-10 flex flex-col justify-center px-5 pb-8 pt-[5.75rem] md:max-w-[50%] md:flex-1 md:px-10 md:py-16 lg:px-14 lg:py-20">
+      {/* Mobile : image visible dès l'arrivée */}
+      <div className="md:hidden">
+        <div className="relative px-4 pt-[5.25rem]">
+          <div className="relative aspect-[5/4] min-h-[42svh] max-h-[360px] overflow-hidden rounded-[1.75rem] shadow-[0_16px_40px_rgba(28,26,23,0.1)]">
+            <Image
+              src="/images/hero-cours.jpg"
+              alt="Cours de yoga vinyasa à Saint-Just-Saint-Rambert · Flow Yoga Loire"
+              fill
+              className="object-cover object-[62%_20%] saturate-[1.05] contrast-[1.03]"
+              priority
+              sizes="100vw"
+            />
+            <div
+              className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink-900/75 via-ink-900/25 to-transparent px-5 pb-5 pt-16"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-x-0 bottom-0 px-5 pb-5">
+              <p className="pill-tag w-fit border-sand-100/25 bg-sand-50/15 text-sand-50/90">
+                Saint-Just-Saint-Rambert
+              </p>
+              <h1 className="mt-3 font-serif text-[clamp(2rem,7.5vw,2.75rem)] leading-[0.98] text-sand-50">
+                Yoga au bord de la Loire
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div className="px-5 pb-6 pt-4">
+          <p className="text-[16px] font-medium leading-snug text-ink-900">
+            Vinyasa, yin, restauratif & prénatal · Floriane Relave Jamon
+          </p>
+          <p className="mt-2 text-[15px] leading-relaxed text-ink-600">
+            Cours du mardi au vendredi · séance d&apos;essai 19 € sur Momoyoga.
+          </p>
+
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {HERO_HIGHLIGHTS.map((item) => (
+              <li
+                key={item}
+                className="rounded-full border border-sand-200/90 bg-sand-50 px-3 py-1 text-[12px] font-medium text-ink-700"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+            <ReservationButton location="hero" className="w-full sm:w-auto" />
+            <Link
+              href="/cours"
+              className="inline-flex w-full items-center justify-center rounded-full border border-sand-200 bg-sand-50 px-6 py-3 text-[15px] font-medium transition-colors hover:border-clay-400 hover:bg-wash-cream sm:w-auto"
+            >
+              Voir les cours
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop : split texte + image */}
+      <div className="hidden min-h-[80vh] md:flex md:flex-row">
+        <div className="relative z-10 flex max-w-[50%] flex-1 flex-col justify-center px-10 py-16 lg:px-14 lg:py-20">
           <p className="pill-tag w-fit border-sand-200/80 bg-sand-50 text-clay-600">
             Saint-Just-Saint-Rambert · Loire (42)
           </p>
 
           <SplitHeading
             as="h1"
-            className="mt-5 max-w-xl text-[clamp(2.25rem,8vw,4.5rem)] text-ink-900"
+            className="mt-5 max-w-xl text-[clamp(2.25rem,4vw,4.5rem)] text-ink-900"
             delay={0.08}
           >
             Yoga au bord de la Loire
@@ -64,17 +123,17 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-4 mb-6 mt-2 aspect-[5/4] max-h-[240px] overflow-hidden rounded-[1.75rem] md:mx-0 md:mb-0 md:mt-0 md:aspect-auto md:max-h-none md:min-h-[80vh] md:flex-1 md:rounded-none">
+        <div className="relative min-h-[80vh] flex-1">
           <Image
             src="/images/hero-cours.jpg"
             alt="Cours de yoga vinyasa à Saint-Just-Saint-Rambert · Flow Yoga Loire"
             fill
-            className="object-cover object-[70%_25%]"
+            className="object-cover object-[62%_22%] saturate-[1.05] contrast-[1.03]"
             priority
-            sizes="(max-width: 768px) 100vw, 55vw"
+            sizes="55vw"
           />
           <div
-            className="absolute inset-y-0 left-0 hidden w-24 bg-gradient-to-r from-wash-cream to-transparent md:block lg:w-32"
+            className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-wash-cream/50 to-transparent"
             aria-hidden="true"
           />
         </div>

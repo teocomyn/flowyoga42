@@ -70,18 +70,14 @@ export function PageHero({
               ) : null}
             </Container>
 
-            <div className="relative aspect-[16/11] max-h-[220px] w-full md:aspect-auto md:max-h-none md:min-h-[52vh] md:flex-1">
+            <div className="relative aspect-[4/3] max-h-[280px] w-full md:aspect-auto md:max-h-none md:min-h-[52vh] md:flex-1">
               <Image
                 src={image}
                 alt={imageAlt}
                 fill
-                className="object-cover object-[center_20%]"
+                className="object-cover object-[center_18%] saturate-[1.04]"
                 priority
                 sizes="(max-width: 768px) 100vw, 52vw"
-              />
-              <div
-                className="absolute inset-y-0 left-0 hidden w-20 bg-gradient-to-r from-wash-cream to-transparent md:block"
-                aria-hidden="true"
               />
             </div>
           </div>
