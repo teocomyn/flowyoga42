@@ -91,7 +91,7 @@ export default function CoursPage() {
         title="Cours & Planning"
       />
 
-      <section className="bg-sand-50 py-[var(--spacing-section)]">
+      <section className="bg-sand-50 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
             <p className="font-serif text-xl text-ink-700">
@@ -160,7 +160,7 @@ export default function CoursPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden py-[var(--spacing-section)]">
+      <section className="relative overflow-hidden pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Image
           src="/images/yoga-enfants-bg.jpg"
           alt=""
@@ -234,7 +234,7 @@ export default function CoursPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
             <h2 className="heading-section">Cours Particulier & Duo</h2>
@@ -263,7 +263,7 @@ export default function CoursPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 bg-sand-100 py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 bg-sand-100 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <p className="label mb-6">Toutes les pratiques</p>
@@ -303,7 +303,7 @@ export default function CoursPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <p className="label mb-6">Planning</p>
@@ -322,7 +322,7 @@ export default function CoursPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 bg-sand-100 py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 bg-sand-100 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <FAQ items={COURS_FAQ} />

@@ -16,7 +16,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-sand-200 bg-sand-50">
-      <Container className="py-[var(--spacing-section)]">
+      <Container className="py-[clamp(3.5rem,6vw,5.5rem)]">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           <div>
             <p className="label mb-4">Navigation</p>

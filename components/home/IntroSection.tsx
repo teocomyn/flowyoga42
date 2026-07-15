@@ -7,7 +7,7 @@ import { CONTACT } from "@/lib/constants";
 
 export function IntroSection() {
   return (
-    <section className="py-[var(--spacing-section)]">
+    <section className="py-[var(--spacing-section)] pb-[var(--spacing-section-inner)]">
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-6">
           <Reveal className="lg:col-span-5">
@@ -43,7 +43,7 @@ export function IntroSection() {
           </div>
         </div>
 
-        <Reveal className="surface-card mt-20 rounded-shell p-8 md:p-10">
+        <Reveal className="surface-card mt-12 rounded-shell p-8 md:p-10">
           <p className="label mb-4">Première fois ?</p>
           <h3 className="font-serif text-2xl tracking-tight">
             Votre séance d&apos;essai à 19 €

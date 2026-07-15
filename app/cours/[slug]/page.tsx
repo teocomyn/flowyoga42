@@ -147,7 +147,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           </div>
         </Container>
 
-        <section className="py-[var(--spacing-section)]">
+        <section className="pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
           <Container>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               <Reveal className="surface-card rounded-card p-8">
@@ -193,7 +193,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           </Container>
         </section>
 
-        <section className="border-t border-sand-200 bg-wash-sky py-[var(--spacing-section)]">
+        <section className="border-t border-sand-200 bg-wash-sky pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
           <Container>
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-6">
               <Reveal className="lg:col-span-5">
@@ -242,7 +242,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
         </section>
 
         {courseSchedule.length > 0 && (
-          <section className="border-t border-sand-200 py-[var(--spacing-section)]">
+          <section className="border-t border-sand-200 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
             <Container>
               <Reveal>
                 <p className="label mb-6">Créneaux</p>
@@ -258,7 +258,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           </section>
         )}
 
-        <section className="border-t border-sand-200 bg-sand-100 py-[var(--spacing-section)]">
+        <section className="border-t border-sand-200 bg-sand-100 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
           <Container>
             <Reveal>
               <FAQ items={courseFaq} title="Questions sur ce cours" />

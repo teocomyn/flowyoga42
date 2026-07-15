@@ -60,7 +60,7 @@ export default function TarifsPage() {
         description="Séances à l'unité, carnets et formules prénatal, enfants et zoom. Early bird jusqu'au 27 septembre."
       />
 
-      <section className="bg-wash-sky py-[var(--spacing-section)]">
+      <section className="bg-wash-sky pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
             <Reveal className="lg:col-span-8">
@@ -107,7 +107,7 @@ export default function TarifsPage() {
         </Container>
       </section>
 
-      <section className="bg-wash-cream py-[var(--spacing-section)]">
+      <section className="bg-wash-cream pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <p className="label mb-6">Formules adultes</p>
@@ -145,7 +145,7 @@ export default function TarifsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 bg-sand-50 py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 bg-sand-50 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <p className="label mb-6">Comparatif</p>
@@ -161,7 +161,7 @@ export default function TarifsPage() {
         </Container>
       </section>
 
-      <section className="bg-wash-sky py-[var(--spacing-section)]">
+      <section className="bg-wash-sky pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <h2 className="heading-section">Enfants (dès 4 ans)</h2>
@@ -175,7 +175,7 @@ export default function TarifsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 bg-wash-cream py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 bg-wash-cream pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <h2 className="heading-section">Autres formules</h2>
@@ -201,7 +201,7 @@ export default function TarifsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 bg-sand-100 py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 bg-sand-100 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <FAQ items={TARIFS_FAQ} title="Questions sur les tarifs" />

@@ -9,7 +9,7 @@ const PracticeFinder = dynamic(() =>
 
 export function TestimonialsSection() {
   return (
-    <section className="border-t border-sand-200 py-[var(--spacing-section)]">
+    <section className="border-t border-sand-200 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
       <Container>
         <Reveal>
           <p className="label mb-6">Avis</p>
@@ -25,7 +25,7 @@ export function TestimonialsSection() {
 
 export function PracticeFinderSection() {
   return (
-    <section className="border-t border-sand-200 py-[var(--spacing-section)]">
+    <section className="border-t border-sand-200 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-6">
           <Reveal className="lg:col-span-5">

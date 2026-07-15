@@ -56,7 +56,7 @@ export default function ContactPage() {
         align="left"
       />
 
-      <section className="py-[var(--spacing-section)]">
+      <section className="pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <nav aria-label="Fil d'Ariane" className="label mb-12">
             <ol className="flex flex-wrap gap-2">
@@ -135,7 +135,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 bg-wash-sky py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 bg-wash-sky pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <p className="label mb-6">Carte</p>
@@ -150,7 +150,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <p className="label mb-6">Lieux de pratique</p>
@@ -174,7 +174,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 bg-blush-50/50 py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 bg-blush-50/50 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal>
             <p className="label mb-6">Avis</p>

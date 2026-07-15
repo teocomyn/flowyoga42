@@ -7,7 +7,7 @@ import { FEATURED_PRACTICES } from "@/content/practices";
 
 export function PracticesSection() {
   return (
-    <section className="border-t border-sand-200 py-[var(--spacing-section)]">
+    <section className="border-t border-sand-200 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
       <Container>
         <Reveal>
           <p className="label mb-6">Pratiques</p>
@@ -19,7 +19,7 @@ export function PracticesSection() {
           </p>
         </Reveal>
 
-        <div className="mt-16 space-y-[var(--spacing-section)]">
+        <div className="mt-12 space-y-[var(--spacing-section-inner)]">
           {FEATURED_PRACTICES.map((practice, index) => {
             const isReversed = index % 2 === 1;
 

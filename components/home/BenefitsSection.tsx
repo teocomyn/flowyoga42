@@ -4,7 +4,7 @@ import { BENEFITS } from "@/content/benefits";
 
 export function BenefitsSection() {
   return (
-    <section className="border-t border-sand-200 bg-sand-100 py-[var(--spacing-section)]">
+    <section className="border-t border-sand-200 bg-sand-100 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
       <Container>
         <Reveal>
           <p className="label mb-6">Bienfaits</p>

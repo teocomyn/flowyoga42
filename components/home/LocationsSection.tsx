@@ -8,7 +8,7 @@ import { LOCATION_IMAGES } from "@/lib/media";
 
 export function LocationsSection() {
   return (
-    <section className="py-[var(--spacing-section)]">
+    <section className="pt-[var(--spacing-section)] pb-[var(--spacing-section-inner)]">
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-6">
           <Reveal className="lg:col-span-5">

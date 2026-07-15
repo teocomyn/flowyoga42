@@ -68,7 +68,7 @@ export default function QuiSuisJePage() {
         description="Lieux de pratique et portrait de Floriane Relave Jamon, votre instructrice certifiée."
       />
 
-      <section className="bg-sand-50 py-[var(--spacing-section)]">
+      <section className="bg-sand-50 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
             <h2 className="heading-section text-clay-600">
@@ -126,7 +126,7 @@ export default function QuiSuisJePage() {
         </Container>
       </section>
 
-      <section className="bg-gradient-to-b from-blush-50/80 to-sand-50 py-[var(--spacing-section)]">
+      <section className="bg-gradient-to-b from-blush-50/80 to-sand-50 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal className="text-center">
             <h2 className="heading-section">Une instructrice certifiée</h2>
@@ -191,7 +191,7 @@ export default function QuiSuisJePage() {
         </Container>
       </section>
 
-      <section className="py-[var(--spacing-section)]">
+      <section className="pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-6">
             <Reveal className="lg:col-span-5">
@@ -227,7 +227,7 @@ export default function QuiSuisJePage() {
         </Container>
       </section>
 
-      <section className="border-t border-sand-200 bg-sand-100 py-[var(--spacing-section)]">
+      <section className="border-t border-sand-200 bg-sand-100 pb-[var(--spacing-section)] pt-[var(--spacing-section-inner)]">
         <Container>
           <Reveal className="max-w-2xl">
             <p className="label mb-6">Philosophie</p>

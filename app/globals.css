@@ -22,7 +22,8 @@
   --font-sans: var(--font-inter-tight);
 
   --spacing-gutter: 1.5rem;
-  --spacing-section: clamp(6rem, 12vw, 12rem);
+  --spacing-section: clamp(3rem, 5.5vw, 4.75rem);
+  --spacing-section-inner: clamp(2rem, 4vw, 3.25rem);
   --spacing-container-x: clamp(1.5rem, 5vw, 6rem);
 
   --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
