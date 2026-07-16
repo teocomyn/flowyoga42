@@ -260,6 +260,26 @@ export function Footer() {
                 <br />
                 SIREN {CONTACT.siren}
               </p>
+              <p className="text-[13px] text-ink-600">
+                Réalisé par{" "}
+                <a
+                  href="https://teocomyn.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="underline decoration-sand-200 underline-offset-2 transition-colors hover:text-clay-600 hover:decoration-clay-400"
+                >
+                  Teo Comyn
+                </a>
+                {" · "}
+                <a
+                  href="https://experaise.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="underline decoration-sand-200 underline-offset-2 transition-colors hover:text-clay-600 hover:decoration-clay-400"
+                >
+                  Experaise
+                </a>
+              </p>
             </AnimatedContainer>
 
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-8">
